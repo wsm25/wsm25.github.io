@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2308网课课程表</title>
+  <link type=text/css  rel="styleSheet" href="style.css"/>
+  <link rel="icon" href="horse.png" type="image/x-icon" />
+  <!-- <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script> -->
+  <script src="vue.js"></script>
+</head>
+<body>
+  <div class='main-table' id="main-table"><table>
+    <tr><th v-for="x in head">{{x}}</th></th>
+    <tr v-for="row in table"><td v-for="i in row">{{i}}</td></tr>
+  </table></div>
+  <script src="main.js"></script>
+</body>
+</html>
