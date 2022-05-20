@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <script src="vue.global.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="horse.svg" type="image/x-icon" />
+</head>
+<body>
+  <h1>井字棋</h1>
+  <div id="game">
+    <table>
+      <tr v-for="row in getBoard">
+        <td v-for="col in row" 
+            is="vue:square" 
+            @push-xo="pushXo(col)" 
+            :xo="this.xoList[col]"
+        ></td> <!-- 注意这里驼峰与短横线的转换 -->
+      </tr>
+    </table>
+    <br><button @click="clear">还原</button>
+    <br><div class="notice">{{notice}}</div>
+    <br><div class="test">{{}}</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
